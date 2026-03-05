@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X} from "lucide-react";
+import logo from "../assets/LOGO-GREEN.png"
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -38,7 +39,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center" onClick={closeMenu}>
             <img
-              src={"src/assets/LOGO-GREEN.png"}
+              src={logo}
               alt="Plantern Logo"
               className="h-7 object-contain"
             />

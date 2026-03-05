@@ -4,6 +4,7 @@ import { Sprout } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import FeaturesSection from "./FeaturesSection";
 import PrivacyTrustSection from "./PrivacyTrustSection";
+import logo from "../../assets/LOGO.png"
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ export default function HomePage() {
               {/* Logo */}
               <div className="flex justify-center">
                 <img
-                  src={"src/assets/LOGO.png"}
+                  src={logo}
                   alt="Plantern Logo"
                   className="w-75 h-75 object-contain"
                 />
