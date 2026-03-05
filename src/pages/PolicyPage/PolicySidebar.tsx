@@ -1,4 +1,3 @@
-import React from "react";
 
 const sections = [
   { id: "introduction", label: "1. Introduction" },

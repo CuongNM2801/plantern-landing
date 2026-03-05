@@ -1,6 +1,6 @@
 import { Apple, CheckCircle2, Droplets, LineChart, Smartphone, Sprout, Users } from "lucide-react";
 import DownloadCard from "./DownloadCard";
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
 const features = [
