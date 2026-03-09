@@ -6,8 +6,8 @@ import logo from "../assets/LOGO-GREEN.png"
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "Download", path: "/download" },
-  { name: "About Us", path: "/privacy-policy" },
-  { name: "Terms", path: "/terms-of-service" },
+  { name: "Privacy", path: "/privacy-policy" },
+  // { name: "Terms", path: "/terms-of-service" },
 ];
 
 const Navbar = () => {

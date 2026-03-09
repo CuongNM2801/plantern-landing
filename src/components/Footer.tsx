@@ -21,17 +21,17 @@ export default function Footer() {
                 <a
                   href="/privacy-policy"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  About Us
+                  Privacy Policy
                 </a>
               </li>
 
-              <li>
+              {/* <li>
                 <a
                   href="/terms-of-service"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Terms of Service
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -39,12 +39,25 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-foreground mb-4">
               Contact
             </h3>
-            <a
+            <ul className="space-y-2">
+              <li>
+                <a
               href="mailto:truongdinhlong4@gmail.com"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
               <Mail className="w-4 h-4" />
               truongdinhlong4@gmail.com
             </a>
+              </li>
+              <li>
+                <a
+              href="mailto:plantern.team@gmail.com"
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Mail className="w-4 h-4" />
+              Plantern team
+            </a>
+              </li>
+            </ul>
+            
           </div>
 
           <div>
