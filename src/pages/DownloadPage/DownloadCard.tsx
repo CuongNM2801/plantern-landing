@@ -8,6 +8,8 @@ interface DownloadCardProps {
   buttonText: string;
   link: string;
   delay?: number;
+  disabled?: boolean;
+  disabledMessage?: string;
 }
 
 export default function DownloadCard({
@@ -17,6 +19,8 @@ export default function DownloadCard({
   buttonText,
   link,
   delay = 0,
+  disabled,
+  disabledMessage,
 }: DownloadCardProps) {
   return (
     <motion.div
@@ -38,13 +42,31 @@ export default function DownloadCard({
       <p className="text-gray-600 mb-8">{description}</p>
 
       {/* button */}
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition">
-        {buttonText}
-      </a>
+      <div className="w-full relative group">
+        {disabled ? (
+          <button
+            disabled
+            className="w-full bg-gray-300 text-gray-500 py-3 rounded-xl font-semibold cursor-not-allowed">
+            {buttonText}
+          </button>
+        ) : (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition">
+            {buttonText}
+          </a>
+        )}
+
+        {disabled && (
+          <div className="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition pointer-events-none">
+            <div className="bg-black text-white text-xs px-3 py-1 rounded whitespace-nowrap">
+              {disabledMessage}
+            </div>
+          </div>
+        )}
+      </div>
     </motion.div>
   );
 }
