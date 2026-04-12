@@ -91,7 +91,7 @@ export default function DownloadPage() {
                 title="Android"
                 description="Requires Android 8.0 and up. Optimized for all modern Android devices."
                 buttonText="Download on Google Play"
-                link="https://play.google.com/store/apps/details?id=com.plantern.app"
+                link="https://play.google.com/store/apps/details?id=com.belongcompany.plantern"
                 delay={0.2}
               />
               <DownloadCard
